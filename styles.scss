@@ -1,0 +1,146 @@
+// add color variables  
+:root {
+  --lightBlue: #2C88CB;
+}
+body {
+  overflow-x: hidden;
+}
+// Ubuntu
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//global fonts
+* {
+  color: #222222;
+  font-family: 'Ubuntu', sans-serif;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.header {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.header__cover-photo {
+  background: url('https://blog.galvanize.com/wp-content/uploads/2018/06/goran-ivos-422398-unsplash.jpg');
+  background-size: cover;  //100% auto;
+  background-position: center top; //optymalize photo
+  background-repeat: no-repeat;
+  position: absolute;
+  filter: opacity(0.4); //change it
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);  
+}
+.header__cover-blue-part {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.8  ;
+  background-color: var(--lightBlue);
+  width: 40%;
+  height: 100%;
+}
+.header__welcome-text {
+  margin: 10% 8%;
+  font-size: 1.75em;
+  letter-spacing: 0.02em;
+  h1 {
+    font-weight: bold;
+    font-size: 4em;
+    margin-bottom: 0.25em;
+  }
+  h2 {
+    font-weight: bold;
+    margin-bottom: 0.25em;
+  }
+  h3 {
+    font-weight: normal;
+    line-height: 1.5em;
+    font-size: 0.8em;
+  }
+  .header__name {
+    color: var(--lightBlue);
+  }
+}
+.header__nav {
+  position: absolute;
+  top: 5%;
+  right: 1.5%;
+
+  width: 32.5vw;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.header__nav-list {
+  display: flex;
+  justify-content: space-around;
+  // padding: 0;
+  li {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 0.02em;
+  }
+}
+.header__icon-wrapper {
+  position: absolute;
+  left: 45%;
+  top: 17.5vh;
+  width: 30vw;
+  height: 30vw;
+  background-color: transparent;
+  .header__icon {
+    width: 75%;
+    height: 75%;
+    border-radius: 50% 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
+    background: url("https://www.smalldogplace.com/images/what-breed-is-this-21889021.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+.header__community {
+  p {
+    color: #fff;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    width: 2.5em; 
+    height: 2.5em;
+    border-radius: 50% 50%; 
+  }
+  i {
+    color: var(--lightBlue);
+
+  }
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5%;
+  li {
+    display: inline-block;
+  }
+}
+section {
+  width: 100vw;
+}
