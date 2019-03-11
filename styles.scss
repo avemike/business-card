@@ -29,8 +29,10 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: 100%;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
   position: absolute;
   left: 0;
   top: 0;
@@ -99,10 +101,12 @@ ul {
   list-style: none;
   padding: 0;
 }
+
 .invisible-cover-of-header {
   width: 100vw;
   height: 100vh;
 }
+
 .header__nav-list {
   display: flex;
   justify-content: space-around;
@@ -168,9 +172,19 @@ ul {
     width: 2.25em;
     height: 2.25em;
     border-radius: 50% 50%;
-  
+
     margin: 5%;
   }
+
+  li.header__github {
+    background-color: transparent;
+
+    i {
+      transform: scale(1.7);
+      color: white;
+    }
+  }
+
   li:last-of-type {
     margin-right: 0;
   }
@@ -183,25 +197,72 @@ ul {
   i {
     color: var(--lightBlue);
     display: inline-block;
-    transform: scale(1.1);
-
+    transform: scale(1.1) translateY(1px);
   }
 
   li {
     display: inline-block;
   }
 }
+
 .btn-round {
   border-radius: 15% / 50%;
 }
+
 .contact-me {
+  margin-top: 2.5em;
   font-size: 1.5em;
+  .contact-me__text {
+    margin: auto;
+  }
+  .contact-me__btns {
+    margin: auto;
+  }
   h1 {
+    margin: auto;
     font-weight: 400;
     letter-spacing: 0.02em;
   }
 }
+.gray-cover {
+  background-color: #F99999;//#F9F9F9;
+  margin-top: 3em;
+  section {
+    h2 {
+      margin: 1em 0 0.5em 0;
+    }
+    margin: auto;
+  }
+}
 section {
-  width: 100%;
+  // width: 100%;
   margin-top: 2.5em;
+  position: relative;
+}
+.center {
+  margin: 0 auto;
+}
+.text-blue {
+  color: var(--lightBlue);
+}
+.white-field {
+  padding: 2em;
+  background-color: white !important;
+}
+.stats-wrapper {
+  display: inline-block;
+}
+.about-me__text {
+  border-left: 1px solid var(--lightBlue);
+}
+.stats {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: bold;
+  p {
+    display: inline-block
+  }
 }
