@@ -2,9 +2,11 @@
 :root {
   --lightBlue: #2C88CB;
 }
+
 body {
   overflow-x: hidden;
 }
+
 // Ubuntu
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
 
@@ -14,15 +16,18 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 //global fonts
 * {
   color: #222222;
   font-family: 'Ubuntu', sans-serif;
 }
+
 .container {
   width: 100vw;
   height: 100vh;
 }
+
 .header {
   width: 100%;
   height: 100%;
@@ -31,9 +36,10 @@ body {
   top: 0;
   overflow: hidden;
 }
+
 .header__cover-photo {
   background: url('https://blog.galvanize.com/wp-content/uploads/2018/06/goran-ivos-422398-unsplash.jpg');
-  background-size: cover;  //100% auto;
+  background-size: cover; //100% auto;
   background-position: center top; //optymalize photo
   background-repeat: no-repeat;
   position: absolute;
@@ -41,39 +47,46 @@ body {
   z-index: -10;
   width: 100%;
   height: 100%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);  
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .header__cover-blue-part {
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0.8  ;
+  opacity: 0.8;
   background-color: var(--lightBlue);
   width: 40%;
   height: 100%;
 }
+
 .header__welcome-text {
   margin: 10% 8%;
   font-size: 1.75em;
   letter-spacing: 0.02em;
+
   h1 {
     font-weight: bold;
     font-size: 4em;
     margin-bottom: 0.25em;
   }
+
   h2 {
     font-weight: bold;
     margin-bottom: 0.25em;
   }
+
   h3 {
     font-weight: normal;
     line-height: 1.5em;
     font-size: 0.8em;
   }
+
   .header__name {
     color: var(--lightBlue);
   }
 }
+
 .header__nav {
   position: absolute;
   top: 5%;
@@ -81,13 +94,19 @@ body {
 
   width: 32.5vw;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
+.invisible-cover-of-header {
+  width: 100vw;
+  height: 100vh;
+}
 .header__nav-list {
   display: flex;
   justify-content: space-around;
+
   // padding: 0;
   li {
     display: inline-block;
@@ -97,6 +116,7 @@ ul {
     letter-spacing: 0.02em;
   }
 }
+
 .header__icon-wrapper {
   position: absolute;
   left: 45%;
@@ -104,6 +124,7 @@ ul {
   width: 30vw;
   height: 30vw;
   background-color: transparent;
+
   .header__icon {
     width: 75%;
     height: 75%;
@@ -115,32 +136,72 @@ ul {
     background-size: cover;
   }
 }
+
 .header__community {
-  p {
-    color: #fff;
-  }
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #fff;
-    width: 2.5em; 
-    height: 2.5em;
-    border-radius: 50% 50%; 
-  }
-  i {
-    color: var(--lightBlue);
-
-  }
+  width: 20%;
+  text-align: right;
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 5%;
+  margin: 2.5% 4%;
+
+  h3 {
+    color: #fff;
+    font-weight: normal;
+    display: inline-block;
+    padding: 0.1em;
+    border-bottom: 2px solid white;
+    letter-spacing: 0.02em;
+  }
+
+  .header__link-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    background-color: #fff;
+    width: 2.25em;
+    height: 2.25em;
+    border-radius: 50% 50%;
+  
+    margin: 5%;
+  }
+  li:last-of-type {
+    margin-right: 0;
+  }
+
+  a {
+    width: fit-content;
+    height: auto;
+  }
+
+  i {
+    color: var(--lightBlue);
+    display: inline-block;
+    transform: scale(1.1);
+
+  }
+
   li {
     display: inline-block;
   }
 }
+.btn-round {
+  border-radius: 15% / 50%;
+}
+.contact-me {
+  font-size: 1.5em;
+  h1 {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+}
 section {
-  width: 100vw;
+  width: 100%;
+  margin-top: 2.5em;
 }
