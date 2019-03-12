@@ -26,10 +26,10 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item">About me</li>
-          <li class="header__nav-item">Skills</li>
-          <li class="header__nav-item">Portfolio</li>
-          <li class="header__nav-item">Contact</li>
+          <a href="#nav-about"><li class="header__nav-item">About me</li></a>
+          <a href="#nav-skills"><li class="header__nav-item">Skills</li></a>
+          <a href="#nav-portfolio"><li class="header__nav-item">Portfolio</li></a>
+          <a href="#nav-contact"><li class="header__nav-item">Contact</li></a>
         </ul>
       </nav>
       <div class="header__community">
@@ -80,8 +80,8 @@
       </div>
     </div>
     <div class="gray-cover">
-      <h2>About me</h2>
-      <section id="about-me" class="white-cover">
+      <h1 id="nav-about">About me</h1>
+      <section class="about-me white-cover">
         <div class="stats">
           <p>Full Name: <span class="text-blue">Cute Wiener</span></p>
           <p>Age: <span class="text-blue">6 Years</span></p>
@@ -96,11 +96,11 @@
             porro mollitia veniam, numquam fugit, molestiae quasi praesentium rerum, quidem repellat?</p>
         </div>
       </section>
-      <h2>Skills</h2>
-      <div id="skills">
+      <h1 id="nav-skills">Skills</h1>
+      <div class="skills">
         <section>
           <div class="hard-ones white-cover">
-            <h2>Hard ones</h2>
+            <h2>Hard <span class="blue-underline">ones</span></h2>
             <div class="skills-hard skills-box">
               <p>html</p>
               <div class="line html"></div>
@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="soft-ones white-cover">
-            <h2>Soft ones</h2>
+            <h2>Soft <span class="blue-underline">ones</span></h2>
             <div class="skills-soft skills-box">
               <p>communication</p>
               <div class="line communication"></div>
@@ -123,12 +123,13 @@
           </div>
         </section>
       </div>
-      <h2>Portfolio</h2>
+      <h1 id="nav-portfolio">Portfolio</h1>
       <section>
-        <div id="portfolio-grid">
+        <div class="portfolio-grid">
           <div class="project white-cover">
             <div class="project-photo">
               <img src="https://picsum.photos/450/390" alt="">
+              <div class="photo-cover">Lorem ipsum</div>
             </div>
             <div class="project-text">
               <h3>Lorem ipsum.</h3>
@@ -139,6 +140,7 @@
           <div class="project white-cover">
             <div class="project-photo">
               <img src="https://picsum.photos/450/395" alt="">
+              <div class="photo-cover">Sit amet</div>
             </div>
             <div class="project-text">
               <h3>Sit amet.</h3>
@@ -149,6 +151,7 @@
           <div class="project white-cover">
             <div class="project-photo">
               <img src="https://picsum.photos/450/400" alt="">
+              <div class="photo-cover">Lorem, ipsum</div>
             </div>
             <div class="project-text">
               <h3>Lorem, ipsum.</h3>
@@ -159,6 +162,7 @@
           <div class="project white-cover">
             <div class="project-photo">
               <img src="https://picsum.photos/450/393" alt="">
+              <div class="photo-cover">Lorem ipsum dolor sit</div>
             </div>
             <div class="project-text">
               <h3>Lorem ipsum dolor sit.</h3>
@@ -169,6 +173,7 @@
           <div class="project white-cover">
             <div class="project-photo">
               <img src="https://picsum.photos/450/401" alt="">
+              <div class="photo-cover">Lorem, ipsum dolor</div>
             </div>
             <div class="project-text">
               <h3>Lorem, ipsum dolor.</h3>
@@ -179,6 +184,7 @@
           <div class="project white-cover">
             <div class="project-photo">
               <img src="https://picsum.photos/450/450" alt="">
+              <div class="photo-cover">Dolor, sit amet</div>            
             </div>
             <div class="project-text">
               <h3>Dolor, sit amet.</h3>
@@ -189,7 +195,7 @@
         </div>
       </section>
     </div>
-    <section id="contact" class="white-cover">
+    <section id="nav-contact" class="contact white-cover">
       <div class="contact-info">
         <div class="weird-horizontal-line"></div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati quos facere architecto,
@@ -206,10 +212,10 @@
       <div class="contact-form">
         <form action="">
           <h2>Feel free to contact me!</h2>
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Your e-mail address">
-          <input type="text" placeholder="What is it about?">
-          <input type="text" placeholder="Message:">
+          <input type="text" name="name" placeholder="Name">
+          <input type="text" name="email" placeholder="Your e-mail address">
+          <input type="text" name="topic" placeholder="What is it about?">
+          <input type="text" name="message" placeholder="Message:">
         </form>
       </div>
     </section>

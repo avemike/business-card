@@ -1,9 +1,8 @@
-#skills {
+.skills {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   // skills parameters
   // class::before is to emulate knowledge level of subject (gradient blue bar)
   .line {

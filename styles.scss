@@ -3,7 +3,7 @@
   --lightBlue: #2C88CB;
   --lightGray: #A0A0A0;
   --darkerWhite: #F9F9F9;
-
+  --yellow: #FDC32F;
   // skill bar levels 
   --html: 75%;
   --css: 65%;
@@ -13,12 +13,12 @@
   --flexibility: 95%;
 }
 @import 'header';
-@import 'contact-me-btns';
 @import 'about-me';
 @import 'skills';
 @import 'portfolio';
 @import 'contact';
 @import 'footer';
+@import 'contact-me-btns';
 // Ubuntu font
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
 
@@ -46,11 +46,14 @@ body {
   padding: 2em 0;
   background-color: var(--darkerWhite);
 
-  h2 {
+  h1,h2 {
     text-align: center;
     margin: 1em 0 0.5em 0;
   }
-
+  h1 {
+    margin-top: 2.75em;
+    font-size: 2.5em;
+  }
   section {
     margin: auto;
   }
@@ -75,4 +78,8 @@ section {
 
 section {
   margin: auto;
+}
+.blue-underline {
+  border-bottom: 1px solid var(--lightBlue); 
+  padding-bottom: 4px;
 }
