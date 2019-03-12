@@ -1,0 +1,104 @@
+#skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // skills parameters
+  // class::before is to emulate knowledge level of subject (gradient blue bar)
+  .line {
+    &::before {
+      content: '';
+      width: 50%;
+      position: absolute;
+      height: 100%;
+      background: linear-gradient(90deg, #2C88CB 0%, #62BDFF 100%);
+      border-radius: 0.25em/50%;
+    }
+  // class::after is to create blue circle at the end of bar 
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateX(-8px);
+      top: -2px;
+      width: 16px;
+      height: 16px;
+      background: #62BDFF;
+      border-radius: 50%;
+    }
+
+    &.css::before {
+      width: var(--css);
+    }
+
+    &.css::after {
+      left: var(--css);
+    }
+
+    &.html::before {
+      width: var(--html);
+    }
+
+    &.html::after {
+      left: var(--html);
+    }
+
+    &.js::before {
+      width: var(--js);
+    }
+
+    &.js::after {
+      left: var(--js);
+    }
+
+    &.communication::before {
+      width: var(--communication);
+    }
+
+    &.communication::after {
+      left: var(--communication);
+    }
+
+    &.teamwork::before {
+      width: var(--teamwork);
+    }
+
+    &.teamwork::after {
+      left: var(--teamwork);
+    }
+
+    &.flexibility::before {
+      width: var(--flexibility);
+    }
+
+    &.flexibility::after {
+      left: var(--flexibility);
+    }
+  }
+
+  section {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section>div {
+    width: 48.5%;
+  }
+
+  .line {
+    width: 100%;
+    height: 0.5em;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0.25em/50%;
+    position: relative;
+  }
+
+  .skills-box {
+    margin: 2em;
+
+    &>* {
+      margin: 0.5em;
+    }
+  }
+}

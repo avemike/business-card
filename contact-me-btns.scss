@@ -1,0 +1,38 @@
+.contact-me-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2.5em;
+  font-size: 1em;
+
+  .contact-me-btns__text {
+    margin: 0 0 1em 0;
+  }
+
+  .contact-me-btns__btns {
+    margin: auto;
+    display: inline-block;
+  }
+
+  h1 {
+    margin: auto;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+}
+.btn {
+  outline: none;
+  margin: 2em 1em;
+  border-radius: 12.5%/50%;
+  padding: 0.5em 2em;
+  background-color: white;
+  color: var(--lightBlue);
+  border: 1px solid var(--lightBlue);
+}
+
+.btn-blue {
+  color: white;
+  background-color: var(--lightBlue);
+}

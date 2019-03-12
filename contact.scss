@@ -1,0 +1,59 @@
+#contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50vh;
+
+  .contact-info {
+    padding: 1.5em;
+    position: relative;
+    background-color: var(--lightBlue);
+
+    .weird-horizontal-line {
+      margin: 1.25em 0 2.5em 0;
+      width: 35%;
+      border-bottom: 1px solid #FFFFFF;
+    }
+
+    p {
+      color: white;
+      max-width: 85%;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      line-height: 1.25;
+
+      b {
+        color: white;
+      }
+    }
+
+    &>p {
+      margin-top: 2em;
+    }
+
+    .address {
+      position: absolute;
+      width: 80%;
+      left: 1.5em;
+      bottom: 1.5em;
+    }
+  }
+
+  .contact-form {
+    position: relative;
+    padding: 5% 15%;
+
+    input {
+      display: block;
+      margin-top: 3em;
+
+      //appearance of input 
+      border: none;
+      border-bottom: 1px solid var(--lightBlue);
+      width: 100%;
+    }
+
+    input:last-of-type {
+      margin-top: 9em;
+    }
+  }
+}

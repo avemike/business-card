@@ -1,0 +1,29 @@
+#about-me {
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2% 5%;
+
+  &>* {
+    padding: 1em;
+    display: inline-block;
+  }
+
+  .stats {
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
+
+  .summary {
+    letter-spacing: 0.02em;
+    border-left: 1px solid var(--lightBlue);
+
+    p {
+      line-height: 1.42;
+    }
+  }
+}

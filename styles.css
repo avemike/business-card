@@ -11,27 +11,6 @@
   --flexibility: 95%;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-* {
-  color: #222222;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-}
-
 .header {
   width: 100vw;
   height: 100vh;
@@ -220,8 +199,35 @@ ul {
   display: inline-block;
 }
 
-.btn-round {
-  border-radius: 15% / 50%;
+.contact-me-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5em;
+  font-size: 1em;
+}
+
+.contact-me-btns .contact-me-btns__text {
+  margin: 0 0 1em 0;
+}
+
+.contact-me-btns .contact-me-btns__btns {
+  margin: auto;
+  display: inline-block;
+}
+
+.contact-me-btns h1 {
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .btn {
@@ -237,53 +243,6 @@ ul {
 .btn-blue {
   color: white;
   background-color: var(--lightBlue);
-}
-
-.contact-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2.5em;
-  font-size: 1em;
-}
-
-.contact-me .contact-me__text {
-  margin: 0 0 1em 0;
-}
-
-.contact-me .contact-me__btns {
-  margin: auto;
-  display: inline-block;
-}
-
-.contact-me h1 {
-  margin: auto;
-  text-align: center;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-.gray-cover {
-  margin: 1.5em 0;
-  width: 100%;
-  padding: 2em 0;
-  background-color: var(--darkerWhite);
-}
-
-.gray-cover h2 {
-  text-align: center;
-  margin: 1em 0 0.5em 0;
-}
-
-.gray-cover section {
-  margin: auto;
 }
 
 #about-me {
@@ -322,33 +281,6 @@ ul {
 
 #about-me .summary p {
   line-height: 1.42;
-}
-
-.text-blue {
-  color: var(--lightBlue);
-}
-
-.about-me__text {
-  border-left: 1px solid var(--lightBlue);
-}
-
-.f-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.white-cover {
-  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
-          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
-  background-color: white;
-}
-
-section {
-  width: 72%;
 }
 
 #skills {
@@ -511,10 +443,6 @@ section {
   color: var(--lightGray);
 }
 
-section {
-  margin: auto;
-}
-
 #contact {
   display: -ms-grid;
   display: grid;
@@ -574,5 +502,65 @@ section {
 
 #contact .contact-form input:last-of-type {
   margin-top: 9em;
+}
+
+footer {
+  text-align: center;
+  margin: 1em;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222222;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  width: 100vw;
+}
+
+.gray-cover {
+  margin: 1.5em 0;
+  width: 100%;
+  padding: 2em 0;
+  background-color: var(--darkerWhite);
+}
+
+.gray-cover h2 {
+  text-align: center;
+  margin: 1em 0 0.5em 0;
+}
+
+.gray-cover section {
+  margin: auto;
+}
+
+.text-blue {
+  color: var(--lightBlue);
+}
+
+.about-me__text {
+  border-left: 1px solid var(--lightBlue);
+}
+
+.white-cover {
+  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+section {
+  width: 72%;
+}
+
+section {
+  margin: auto;
 }
 /*# sourceMappingURL=styles.css.map */
