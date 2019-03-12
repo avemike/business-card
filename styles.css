@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700");
 :root {
   --lightBlue: #2C88CB;
+  --html: 75%;
+  --css: 65%;
+  --js: 84%;
+  --communication: 75%;
+  --teamwork: 80%;
+  --flexibility: 95%;
 }
 
 body {
@@ -216,36 +222,101 @@ ul {
   border-radius: 15% / 50%;
 }
 
+.btn {
+  outline: none;
+  margin: 2em 1em;
+  border-radius: 12.5%/50%;
+  padding: 0.5em 2em;
+  background-color: white;
+  color: var(--lightBlue);
+  border: 1px solid var(--lightBlue);
+}
+
+.btn-blue {
+  color: white;
+  background-color: var(--lightBlue);
+}
+
 .contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 2.5em;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .contact-me .contact-me__text {
-  margin: auto;
+  margin: 0 0 1em 0;
 }
 
 .contact-me .contact-me__btns {
   margin: auto;
+  display: inline-block;
 }
 
 .contact-me h1 {
   margin: auto;
+  text-align: center;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
 
 .gray-cover {
+  margin: 1.5em 0;
+  padding: 2em 0;
   background-color: #F99999;
-  margin-top: 3em;
+}
+
+.gray-cover h2 {
+  text-align: center;
+  margin: 1em 0 0.5em 0;
 }
 
 .gray-cover section {
   margin: auto;
 }
 
-.gray-cover section h2 {
-  margin: 1em 0 0.5em 0;
+#about-me {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  padding: 2em 4em;
+}
+
+#about-me > * {
+  padding: 1em;
+  display: inline-block;
+}
+
+#about-me .stats {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about-me .summary {
+  border-left: 1px solid var(--lightBlue);
+}
+
+#about-me .summary p {
+  line-height: 1.42;
 }
 
 section {
@@ -254,43 +325,144 @@ section {
 }
 
 .center {
-  margin: 0 auto;
+  margin: auto;
 }
 
 .text-blue {
   color: var(--lightBlue);
 }
 
-.white-field {
-  padding: 2em;
-  background-color: white !important;
-}
-
-.stats-wrapper {
-  display: inline-block;
-}
-
 .about-me__text {
   border-left: 1px solid var(--lightBlue);
 }
 
-.stats {
-  width: 100%;
-  height: 100%;
+.f-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  font-weight: bold;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.stats p {
-  display: inline-block;
+.white-cover {
+  -webkit-box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+section {
+  width: 80%;
+}
+
+#skills {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#skills .line::before {
+  content: '';
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#2C88CB), to(#62BDFF));
+  background: linear-gradient(90deg, #2C88CB 0%, #62BDFF 100%);
+  border-radius: 0.25em/50%;
+}
+
+#skills .line::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: translateX(-4px);
+          transform: translateX(-4px);
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  background: #62BDFF;
+  border-radius: 50%;
+}
+
+#skills .line.css::before {
+  width: var(--css);
+}
+
+#skills .line.css::after {
+  left: var(--css);
+}
+
+#skills .line.html::before {
+  width: var(--html);
+}
+
+#skills .line.html::after {
+  left: var(--html);
+}
+
+#skills .line.js::before {
+  width: var(--js);
+}
+
+#skills .line.js::after {
+  left: var(--js);
+}
+
+#skills .line.communication::before {
+  width: var(--communication);
+}
+
+#skills .line.communication::after {
+  left: var(--communication);
+}
+
+#skills .line.teamwork::before {
+  width: var(--teamwork);
+}
+
+#skills .line.teamwork::after {
+  left: var(--teamwork);
+}
+
+#skills .line.flexibility::before {
+  width: var(--flexibility);
+}
+
+#skills .line.flexibility::after {
+  left: var(--flexibility);
+}
+
+#skills section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#skills section > div {
+  width: 48.5%;
+}
+
+#skills .line {
+  width: 100%;
+  height: 0.5em;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.25em/50%;
+  position: relative;
+}
+
+#skills .skills-box {
+  margin: 2em;
+}
+
+#skills .skills-box > * {
+  margin: 0.5em;
 }
 /*# sourceMappingURL=styles.css.map */

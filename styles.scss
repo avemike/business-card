@@ -1,6 +1,12 @@
 // add color variables  
 :root {
   --lightBlue: #2C88CB;
+  --html: 75%;
+  --css: 65%;
+  --js: 84%;
+  --communication: 75%;
+  --teamwork: 80%;
+  --flexibility: 95%;
 }
 
 body {
@@ -209,29 +215,85 @@ ul {
   border-radius: 15% / 50%;
 }
 
+//
+//
+//
+.btn {
+  outline: none;
+  margin: 2em 1em;
+  border-radius: 12.5%/50%;
+  padding: 0.5em 2em;
+  background-color: white;
+  color: var(--lightBlue);
+  border: 1px solid var(--lightBlue);
+}
+
+.btn-blue {
+  color: white;
+  background-color: var(--lightBlue);
+}
+
 .contact-me {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin-top: 2.5em;
-  font-size: 1.5em;
+  font-size: 1em;
+
   .contact-me__text {
-    margin: auto;
+    margin: 0 0 1em 0;
   }
+
   .contact-me__btns {
     margin: auto;
+    display: inline-block;
   }
+
   h1 {
     margin: auto;
+    text-align: center;
     font-weight: 400;
     letter-spacing: 0.02em;
   }
 }
+
 .gray-cover {
-  background-color: #F99999;//#F9F9F9;
-  margin-top: 3em;
+  margin: 1.5em 0;
+  padding: 2em 0;
+  background-color: #F99999; //#F9F9F9;
+
+  h2 {
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+  }
   section {
-    h2 {
-      margin: 1em 0 0.5em 0;
-    }
     margin: auto;
+  }
+}
+
+#about-me {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2em 4em;
+  &>* {
+    padding: 1em;
+    display: inline-block;
+  }
+  .stats {
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+  }
+  .summary {
+    border-left: 1px solid var(--lightBlue);
+    p {
+      line-height: 1.42;
+    }
   }
 }
 section {
@@ -239,30 +301,127 @@ section {
   margin-top: 2.5em;
   position: relative;
 }
+
 .center {
-  margin: 0 auto;
+  margin: auto;
 }
+
 .text-blue {
   color: var(--lightBlue);
 }
-.white-field {
-  padding: 2em;
-  background-color: white !important;
-}
-.stats-wrapper {
-  display: inline-block;
-}
+
+
+
+
+
+
+// 
+//  
+// 
+
+
 .about-me__text {
   border-left: 1px solid var(--lightBlue);
 }
-.stats {
-  width: 100%;
-  height: 100%;
+
+.f-center {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-weight: bold;
-  p {
-    display: inline-block
+  justify-content: center;
+}
+.white-cover {
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+section {
+  width: 80%;
+}
+
+// 
+// 
+// SKILLS 
+// 
+#skills {
+  // skills parameters
+  // class::before is to emulate knowledge level of subject (gradient blue bar)
+  // class::after is to create blue circle at the end of bar 
+  .line {
+    &::before {
+      content: '';
+      width: 50%;
+      position: absolute;
+      height: 100%;
+      background: linear-gradient(90deg, #2C88CB 0%, #62BDFF 100%);
+      border-radius: 0.25em/50%;      
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateX(-4px);
+      top: -4px;
+      width: 16px;
+      height: 16px;
+      background: #62BDFF;
+      border-radius: 50%;
+    }
+    &.css::before {
+      width: var(--css);
+    }
+    &.css::after {
+      left: var(--css);
+    }
+    &.html::before {
+      width: var(--html);
+    }
+    &.html::after {
+      left: var(--html);
+    }
+    &.js::before {
+      width: var(--js);
+    }
+    &.js::after {
+      left: var(--js);
+    }
+    &.communication::before {
+      width: var(--communication);
+    }
+    &.communication::after {
+      left: var(--communication);
+    }
+    &.teamwork::before {
+      width: var(--teamwork);
+    }
+    &.teamwork::after {
+      left: var(--teamwork);
+    }
+    &.flexibility::before {
+      width: var(--flexibility);
+    }
+    &.flexibility::after {
+      left: var(--flexibility);
+    }
+  }
+  section {
+    display: flex;
+    justify-content: space-between; 
+  }
+  section > div {
+    width: 48.5%;
+  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .line {
+    width: 100%;
+    height: 0.5em;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0.25em/50%;
+    position: relative;
+  }
+  .skills-box {
+    margin: 2em;
+    &>* {
+      margin: 0.5em;
+    }
   }
 }
