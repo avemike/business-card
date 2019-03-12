@@ -2,6 +2,8 @@
 :root {
   --lightBlue: #2C88CB;
   --lightGray: #A0A0A0;
+  --darkerWhite: #F9F9F9;
+
   --html: 75%;
   --css: 65%;
   --js: 84%;
@@ -264,12 +266,13 @@ ul {
   margin: 1.5em 0;
   width: 100%;
   padding: 2em 0;
-  background-color: #F99999; //#F9F9F9;
+  background-color: var(--darkerWhite);
 
   h2 {
     text-align: center;
     margin: 1em 0 0.5em 0;
   }
+
   section {
     margin: auto;
   }
@@ -280,21 +283,25 @@ ul {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 2% 5%;
+
   &>* {
     padding: 1em;
     display: inline-block;
   }
+
   .stats {
     font-weight: 500;
     letter-spacing: 0.03em;
     display: flex;
     flex-direction: column;
-    
+
     justify-content: space-between;
   }
+
   .summary {
     letter-spacing: 0.02em;
     border-left: 1px solid var(--lightBlue);
+
     p {
       line-height: 1.42;
     }
@@ -323,10 +330,12 @@ ul {
   display: flex;
   justify-content: center;
 }
+
 .white-cover {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
   background-color: white;
 }
+
 section {
   width: 72%;
 }
@@ -336,7 +345,7 @@ section {
 // SKILLS 
 // 
 #skills {
-  
+
   // skills parameters
   // class::before is to emulate knowledge level of subject (gradient blue bar)
   // class::after is to create blue circle at the end of bar 
@@ -347,67 +356,84 @@ section {
       position: absolute;
       height: 100%;
       background: linear-gradient(90deg, #2C88CB 0%, #62BDFF 100%);
-      border-radius: 0.25em/50%;      
+      border-radius: 0.25em/50%;
     }
+
     &::after {
       content: '';
       position: absolute;
-      transform: translateX(-4px);
-      top: -4px;
+      transform: translateX(-8px);
+      top: -2px;
       width: 16px;
       height: 16px;
       background: #62BDFF;
       border-radius: 50%;
     }
+
     &.css::before {
       width: var(--css);
     }
+
     &.css::after {
       left: var(--css);
     }
+
     &.html::before {
       width: var(--html);
     }
+
     &.html::after {
       left: var(--html);
     }
+
     &.js::before {
       width: var(--js);
     }
+
     &.js::after {
       left: var(--js);
     }
+
     &.communication::before {
       width: var(--communication);
     }
+
     &.communication::after {
       left: var(--communication);
     }
+
     &.teamwork::before {
       width: var(--teamwork);
     }
+
     &.teamwork::after {
       left: var(--teamwork);
     }
+
     &.flexibility::before {
       width: var(--flexibility);
     }
+
     &.flexibility::after {
       left: var(--flexibility);
     }
   }
+
   section {
     font-size: 1.5em;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
   }
-  section > div {
+
+  section>div {
     width: 48.5%;
   }
+
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   .line {
     width: 100%;
     height: 0.5em;
@@ -415,8 +441,10 @@ section {
     border-radius: 0.25em/50%;
     position: relative;
   }
+
   .skills-box {
     margin: 2em;
+
     &>* {
       margin: 0.5em;
     }
@@ -432,38 +460,106 @@ section {
 #portfolio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
+
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   grid-auto-rows: 400px;
+
   .project {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+
     .project-photo {
       height: 75%;
       width: auto;
       overflow: hidden;
+
       img {
         width: 100%;
         height: auto;
       }
-    } 
+    }
+
     .project-text {
       padding: 2% 5%;
+
       h3 {
         font-size: 1.25em;
         letter-spacing: 0.05em;
         line-height: 0.9;
       }
+
       a {
         text-decoration: none;
         font-weight: bold;
         color: var(--lightBlue);
       }
+
       p {
         margin-top: 2.5%;
         color: var(--lightGray);
       }
+    }
+  }
+}
+
+
+
+// 
+// Contact
+// 
+
+section {
+   margin: auto;
+}
+#contact {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50vh;
+  .contact-info {
+    padding: 1.5em;
+    position: relative;
+    background-color: var(--lightBlue);
+    .weird-horizontal-line {
+      margin: 1.25em 0 2.5em 0;
+      width: 35%;
+      border-bottom: 1px solid #FFFFFF;
+    }
+    p {
+      color: white;
+      max-width: 85%;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      line-height: 1.25;
+      b {
+        color: white;
+      }
+    }
+    &>p {
+      margin-top: 2em;
+    }
+    .address {
+      position: absolute;
+      width: 80%;
+      left: 1.5em;
+      bottom: 1.5em;
+    }
+  }
+  .contact-form {
+    position: relative;
+    padding: 5% 15%;
+    input {
+      display: block;
+      margin-top: 3em;
+
+      //appearance of input 
+      border: none;
+      border-bottom: 1px solid var(--lightBlue);
+      width: 100%;
+    }
+    input:last-of-type {
+      margin-top: 9em;
     }
   }
 }
