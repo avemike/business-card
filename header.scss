@@ -9,7 +9,7 @@
 }
 
 .header__cover-photo {
-  background: url('https://blog.galvanize.com/wp-content/uploads/2018/06/goran-ivos-422398-unsplash.jpg');
+  background: url(header_bg.jpg);
   background-size: cover; //100% auto;
   background-position: center top; //optymalize photo
   background-repeat: no-repeat;
@@ -79,6 +79,10 @@ ul {
 .header__nav-list {
   display: flex;
   justify-content: space-around;
+  .flex-gap {
+    min-width: 3vw;
+    height: 2px;
+  }
 
   // padding: 0;
   li {
@@ -91,6 +95,7 @@ ul {
 }
 
 .header__icon-wrapper {
+  z-index: 100;
   position: absolute;
   left: 45%;
   top: 17.5vh;
@@ -105,7 +110,7 @@ ul {
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
-    background: url("https://www.smalldogplace.com/images/what-breed-is-this-21889021.jpg") no-repeat center;
+    background: url(ongo_gablogian.jpg) no-repeat center;
     background-size: cover;
   }
 }
@@ -168,7 +173,7 @@ ul {
     display: inline-block;
     transform: scale(1.1) translateY(1px);
   }
-
+  
   li {
     display: inline-block;
   }
@@ -177,6 +182,23 @@ ul {
 
 
 
+@media only screen and (min-width: 801px) and (max-width: 1300px) {
+  .header__welcome-text {
+    max-width: 40vw;
+    text-align: center;
+    font-size: 2em;
+  }
+  .header__icon-wrapper {
+    transform: translateY(200px);
+    position: absolute;
+    right: 0;
+    top: 00%;
+    .header__icon {
+      width: calc(100% + 4em);
+      height: calc(100% + 4em);
+    }
+  }
+}
 
 @media only screen and (max-width: 800px) {
   .header {
@@ -189,15 +211,15 @@ ul {
       margin-top: calc(35vw + 10vh);
       text-align: center;
       h1 {
-        font-size: 15vw;
+        font-size: calc(9vw + 1.5vh);
         margin: 2vh 0;
       }
       h2 {
-        font-size: 10vw;
+        font-size: calc(7vw + 1vh);
         margin: 3vh 0;
       }
       h3 {
-        font-size: 6vw;
+        font-size: calc(5vw + 1vh);
         margin: 2vh 0;
       }
     }

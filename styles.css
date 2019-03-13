@@ -23,7 +23,7 @@
 }
 
 .header__cover-photo {
-  background: url("https://blog.galvanize.com/wp-content/uploads/2018/06/goran-ivos-422398-unsplash.jpg");
+  background: url(header_bg.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -89,6 +89,10 @@ ul {
   display: flex;
   justify-content: space-around;
 }
+.header__nav-list .flex-gap {
+  min-width: 3vw;
+  height: 2px;
+}
 .header__nav-list li {
   display: inline-block;
   color: #fff;
@@ -98,6 +102,7 @@ ul {
 }
 
 .header__icon-wrapper {
+  z-index: 100;
   position: absolute;
   left: 45%;
   top: 17.5vh;
@@ -112,7 +117,7 @@ ul {
   margin: 0 auto;
   overflow: hidden;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
-  background: url("https://www.smalldogplace.com/images/what-breed-is-this-21889021.jpg") no-repeat center;
+  background: url(ongo_gablogian.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -169,6 +174,24 @@ ul {
   display: inline-block;
 }
 
+@media only screen and (min-width: 801px) and (max-width: 1300px) {
+  .header__welcome-text {
+    max-width: 40vw;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .header__icon-wrapper {
+    transform: translateY(200px);
+    position: absolute;
+    right: 0;
+    top: 0%;
+  }
+  .header__icon-wrapper .header__icon {
+    width: calc(100% + 4em);
+    height: calc(100% + 4em);
+  }
+}
 @media only screen and (max-width: 800px) {
   .header {
     width: 100vw;
@@ -181,15 +204,15 @@ ul {
     text-align: center;
   }
   .header .header__welcome-text h1 {
-    font-size: 15vw;
+    font-size: calc(9vw + 1.5vh);
     margin: 2vh 0;
   }
   .header .header__welcome-text h2 {
-    font-size: 10vw;
+    font-size: calc(7vw + 1vh);
     margin: 3vh 0;
   }
   .header .header__welcome-text h3 {
-    font-size: 6vw;
+    font-size: calc(5vw + 1vh);
     margin: 2vh 0;
   }
   .header .header__nav-list {
@@ -358,7 +381,7 @@ ul {
   overflow: hidden;
 }
 .portfolio-grid .project .project-photo {
-  height: 75%;
+  height: 72%;
   width: auto;
   overflow: hidden;
   position: relative;
@@ -388,7 +411,7 @@ ul {
   opacity: 1;
 }
 .portfolio-grid .project .project-text {
-  padding: 2% 5%;
+  padding: 3% 7%;
 }
 .portfolio-grid .project .project-text h3 {
   font-size: 1.25em;
@@ -414,6 +437,11 @@ ul {
     width: 80%;
     margin: 0 auto;
     padding: 1em 0;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .portfolio-grid .project-text {
+    padding: 2vh 2vw;
   }
 }
 .contact {
@@ -494,10 +522,6 @@ footer {
 
 .contact-me-btns {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 2.5em;
   font-size: 1em;
 }
@@ -507,6 +531,7 @@ footer {
 .contact-me-btns .contact-me-btns__btns {
   margin: auto;
   display: inline-block;
+  width: 100%;
 }
 .contact-me-btns h1 {
   margin: auto;
@@ -514,6 +539,12 @@ footer {
   font-size: 2.5em;
   font-weight: 400;
   letter-spacing: 0.02em;
+}
+.contact-me-btns .btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {

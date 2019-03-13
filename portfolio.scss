@@ -12,7 +12,7 @@
     overflow: hidden;
 
     .project-photo {
-      height: 75%;
+      height: 72%;
       width: auto;
       overflow: hidden;
       position: relative;
@@ -44,7 +44,7 @@
     }
 
     .project-text {
-      padding: 2% 5%;
+      padding: 3% 7%;
 
       h3 {
         font-size: 1.25em;
@@ -76,8 +76,10 @@
     }
   }
 }
-@media only screen and (min-width: 801px) and (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
   .portfolio-grid {
-    
+    .project-text {
+      padding: 2vh 2vw;
+    }
   }
 }
