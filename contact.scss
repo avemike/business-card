@@ -1,7 +1,7 @@
 .contact {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50vh;
+  grid-template-rows: calc(50vh + 8em);
 
   .contact-info {
     padding: 1.5em;
@@ -66,16 +66,16 @@
 @media only screen and (max-width: 800px) {
   .contact {
     grid-template-columns: 1fr;
-    grid-template-rows: 70vh 1fr; 
+    grid-template-rows: calc(50vh+2em) 1fr; 
   }
 }
 @media only screen and (min-width: 801px) and (max-width: 950px) {
   .contact {
-    grid-template-rows: 60vh 1fr;
+    grid-template-rows: calc(60vh+6em) 1fr;
   }
 }
 @media only screen and (min-width: 951px) and (max-width: 1300px) {
   .contact {
-    grid-template-rows: 50vh 1fr;
+    grid-template-rows: calc(50vh + 6em) 1fr;
   }
 }
