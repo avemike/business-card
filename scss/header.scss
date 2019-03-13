@@ -9,7 +9,7 @@
 }
 
 .header__cover-photo {
-  background: url(header_bg.jpg);
+  background: url(../imgs/header_bg.jpg);
   background-size: cover; //100% auto;
   background-position: center top; //optymalize photo
   background-repeat: no-repeat;
@@ -110,7 +110,7 @@ ul {
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
-    background: url(ongo_gablogian.jpg) no-repeat center;
+    background: url(../imgs/ongo_gablogian.jpg) no-repeat center;
     background-size: cover;
   }
 }
