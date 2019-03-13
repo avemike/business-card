@@ -83,3 +83,21 @@ section {
   border-bottom: 1px solid var(--lightBlue); 
   padding-bottom: 4px;
 }
+h1, h2, h3 {
+  letter-spacing: 0.02em;
+}
+@media only screen and (max-width: 800px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    // overflow-x: hidden;
+    // overflow-y: scroll !important;
+  }
+  .container {
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+  }
+  section {
+    width: 100%;
+  }
+}

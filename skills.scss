@@ -101,3 +101,22 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 800px) {
+  .skills>section {
+    flex-direction: column;
+    &>* {
+      margin-bottom: 5vh;
+      width: 100% !important;
+    }
+    .skills-box {
+      margin: auto ;
+      width: 80%;
+      padding: 0 !important;
+      &>* {
+        margin: 2vh 0;
+      }
+    }
+  }
+}
