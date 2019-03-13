@@ -17,8 +17,9 @@
       overflow: hidden;
       position: relative;
       img {
+
         width: 100%;
-        height: auto;
+        height: fit-content;
       }
       .photo-cover {
         cursor: pointer;
@@ -62,5 +63,21 @@
         color: var(--lightGray);
       }
     }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; 
+    grid-row-gap: 4vh;
+    .project {
+      width: 80%;
+      margin: 0 auto;
+      padding: 1em 0;
+    }
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1300px) {
+  .portfolio-grid {
+    
   }
 }

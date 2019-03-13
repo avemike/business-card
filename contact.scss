@@ -63,3 +63,19 @@
     }
   }
 }
+@media only screen and (max-width: 800px) {
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70vh 1fr; 
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 950px) {
+  .contact {
+    grid-template-rows: 60vh 1fr;
+  }
+}
+@media only screen and (min-width: 951px) and (max-width: 1300px) {
+  .contact {
+    grid-template-rows: 50vh 1fr;
+  }
+}
